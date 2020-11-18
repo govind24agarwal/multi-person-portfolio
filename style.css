@@ -1,8 +1,57 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 img {
   max-width: 10vw;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.portfolio {
+  background: radial-gradient(rgba(86, 97, 93, 1), rgba(0, 0, 0, 1));
+  color: white;
+}
+nav {
+  width: 90%;
+  margin: auto;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburger-menu .line {
+  height: 0.2rem;
+  width: 1.3rem;
+  background-color: white;
+}
+.page {
+  height: 90vh;
+  color: white;
+  display: grid;
+  grid-template-columns: 5% repeat(3, 1fr) 5%;
+}
+
+.page .details {
+  grid-column: 2/3;
+  align-self: flex-end;
+}
+.details h1 {
+  font-weight: normal;
+  margin: 2rem 0;
+  font-size: x-large;
+}
+.details h2 {
+  font-weight: lighter;
+  margin: 2rem 0;
+  font-size: large;
+}
+.hero {
+  justify-self: center;
+  align-self: center;
+  display: flex;
 }

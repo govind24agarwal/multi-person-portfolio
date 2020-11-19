@@ -54,6 +54,7 @@ nav {
   justify-self: center;
   align-self: center;
   display: flex;
+  cursor: pointer;
 }
 .hero img {
   transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -67,4 +68,29 @@ nav {
 .hero:hover .model-right,
 .hero:hover .model-left {
   transform: translateY(0%);
+}
+.pages {
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+.page-1,
+.page-2,
+.page-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-1 h3,
+.page-2 h3,
+.page-3 h3 {
+  padding: 1rem;
+}
+.page-1 svg,
+.page-2 svg,
+.page-3 svg {
+  cursor: pointer;
+  opacity: 0.5;
+  transform: scale(1.5) translateY(-20%);
 }

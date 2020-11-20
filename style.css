@@ -94,3 +94,17 @@ nav {
   opacity: 0.5;
   transform: scale(1.5) translateY(-20%);
 }
+.pages svg:hover {
+  animation: dot 0.5s ease-in-out infinite alternate;
+}
+.pages svg.active {
+  opacity: 1;
+}
+@keyframes dot {
+  0% {
+    transform: scale(1.5) translateY(-20%);
+  }
+  100% {
+    transform: scale(3) translateY(-10%);
+  }
+}

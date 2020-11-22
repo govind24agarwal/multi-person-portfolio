@@ -165,10 +165,39 @@ nav {
   max-height: 400px;
 }
 .work-gallery {
+  align-self: flex-end;
   display: grid;
   grid-template-columns: 150px 150px 150px;
   height: 300px;
 }
 .work-gallery img {
   width: 100%;
+}
+
+/*MEdia Queries*/
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 2fr 1fr;
+  }
+  .hero {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .hero img {
+    max-width: 15vw;
+    height: auto;
+  }
+}
+@media (max-width: 450px) {
+  .page {
+    height: 85vh;
+    grid-template-rows: 3fr 1fr;
+  }
+  .pages {
+    display: none;
+  }
+  .hero img {
+    max-width: 30vw;
+  }
 }

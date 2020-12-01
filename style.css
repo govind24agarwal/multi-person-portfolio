@@ -25,13 +25,46 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.logo,
+.hamburger-menu {
+  z-index: 2;
+}
+.hamburger-menu {
+  cursor: pointer;
+}
+.nav-open {
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 50vh;
+  background-color: honeydew;
+  color: black;
+  z-index: 1;
+  transform: translateY(-100%);
+}
+.contact {
+  grid-column: 2/3;
+}
+.nav-open h3 {
+  font-size: 28px;
+  padding-bottom: 40px;
+}
+.social-links svg {
+  margin: 0px 10px;
+}
 .hamburger-menu .line {
   height: 0.2rem;
   width: 1.3rem;
   background-color: white;
 }
 .pages {
-  position: fixed;
+  position: absolute;
   top: 50%;
   right: 5%;
   transform: translateY(-50%);
@@ -76,7 +109,15 @@ nav {
   display: grid;
   grid-template-columns: 5% repeat(3, 1fr) 5%;
 }
-
+.traveler,
+.swimmer {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
 .page .details {
   grid-column: 2/3;
   align-self: flex-end;
@@ -96,6 +137,9 @@ nav {
   align-self: center;
   display: flex;
   cursor: pointer;
+}
+.hero a {
+  display: flex;
 }
 .hero img {
   transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
